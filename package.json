@@ -1,0 +1,25 @@
+{
+  "name": "auto-roi-calc-web-events-tracking",
+  "version": "1.0.0",
+  "description": "A wrapper for the AutoROICalc custom web events tracking JavaScript module.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutoROICalc/custom-web-events-tracking-npm.git"
+  },
+  "keywords": [
+    "web",
+    "event",
+    "tracking",
+    "autoroicalc",
+    "session",
+    "source",
+    "medium"
+  ],
+  "author": "AutoROICalc",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/AutoROICalc/custom-web-events-tracking-npm/issues"
+  },
+  "homepage": "https://github.com/AutoROICalc/custom-web-events-tracking-npm#readme"
+}
