@@ -1,22 +1,14 @@
-import * as arc from "./auto-roi-calc";
+const arc = require("./auto-roi-calc");
 
-export class AutoRoiCalc {
+class AutoRoiCalc {
   constructor(trackingId = "") {
     if (trackingId) {
       this.setTrackingId(trackingId);
     }
   }
 
-  appendNewSource(
-    customSource = "",
-    checkTimeout = true,
-    customTimeoutStorageItemName = ""
-  ) {
-    return arc.appendNewSource(
-      customSource,
-      checkTimeout,
-      customTimeoutStorageItemName
-    );
+  appendNewSource(customSource = "", checkTimeout = true, customTimeoutStorageItemName = "") {
+    return arc.appendNewSource(customSource, checkTimeout, customTimeoutStorageItemName);
   }
 
   getSources(removeDuplicates = true) {
@@ -34,27 +26,14 @@ export class AutoRoiCalc {
   getConfig() {
     return arc.getConfig();
   }
-  
-  sendEvent(
-    type,
-    desc,
-    value = 1,
-    checkTimeout = true,
-    customTimeoutStorageItemName = "",
-    customSource = ""
-  ) {
-    return arc.sendEvent(
-      type,
-      desc,
-      value,
-      checkTimeout,
-      customTimeoutStorageItemName,
-      customSource
-    )
+
+  sendEvent(type, desc, value = 1, checkTimeout = true, customTimeoutStorageItemName = "", customSource = "") {
+    return arc.sendEvent(type, desc, value, checkTimeout, customTimeoutStorageItemName, customSource);
   }
 
   setSourcesCookie() {
     arc.setSourcesCookie();
   }
-  
 }
+
+module.exports = { AutoRoiCalc };

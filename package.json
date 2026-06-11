@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "A wrapper for the AutoROICalc custom web events tracking JavaScript module.",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AutoROICalc/custom-web-events-tracking-npm.git"

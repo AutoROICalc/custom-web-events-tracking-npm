@@ -8,7 +8,7 @@ npm install auto-roi-calc-web-events-tracking
 ```javascript
 import { AutoRoiCalc } from 'auto-roi-calc-web-events-tracking';
 
-const arc: AutoRoiCalc = new AutoRoiCalc('YOUR_TRACKING_ID>');
+const arc: AutoRoiCalc = new AutoRoiCalc('YOUR_TRACKING_ID');
 arc.appendNewSource();
 arc.sendEvent("recordType", "record description");
 ```
