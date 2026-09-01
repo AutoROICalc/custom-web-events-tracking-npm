@@ -78,6 +78,7 @@ declare module 'auto-roi-calc-web-events-tracking' {
      * @param {boolean} checkTimeout Whether to check timeout from last request.
      * @param {string} customTimeoutStorageItemName Custom timeout storage item name.
      * @param {string} customSource Custom source to use instead the collected ones.
+     * @param {Array<string> | string} tags Record tags to send with the event.
      * @returns {boolean}
      */
     sendEvent(
@@ -86,7 +87,8 @@ declare module 'auto-roi-calc-web-events-tracking' {
       value?: number,
       checkTimeout?: boolean,
       customTimeoutStorageItemName?: string,
-      customSource?: string
+      customSource?: string,
+      tags?: Array<string> | string
     ): boolean;
     
     setSourcesCookie(): void;

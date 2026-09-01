@@ -27,8 +27,8 @@ class AutoRoiCalc {
     return arc.getConfig();
   }
 
-  sendEvent(type, desc, value = 1, checkTimeout = true, customTimeoutStorageItemName = "", customSource = "") {
-    return arc.sendEvent(type, desc, value, checkTimeout, customTimeoutStorageItemName, customSource);
+  sendEvent(type, desc, value = 1, checkTimeout = true, customTimeoutStorageItemName = "", customSource = "", tags = "") {
+    return arc.sendEvent(type, desc, value, checkTimeout, customTimeoutStorageItemName, customSource, tags);
   }
 
   setSourcesCookie() {

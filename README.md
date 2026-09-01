@@ -10,7 +10,7 @@ import { AutoRoiCalc } from 'auto-roi-calc-web-events-tracking';
 
 const arc: AutoRoiCalc = new AutoRoiCalc('YOUR_TRACKING_ID');
 arc.appendNewSource();
-arc.sendEvent("recordType", "record description");
+arc.sendEvent("recordType", "record description", 1, true, "", "", ["lead", "pricing"]);
 ```
 ## Need help?
 Contact the support at support@autoroicalc.com

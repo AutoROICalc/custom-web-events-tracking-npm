@@ -28,7 +28,8 @@ declare module "AutoRoiCalc" {
       value: number = 1,
       checkTimeout: boolean = true,
       customTimeoutStorageItemName: string = "",
-      customSource: string = ""
+      customSource: string = "",
+      tags: Array<string> | string = ""
     ): boolean;
     setSourcesCookie(): void;
   }
