@@ -1,6 +1,6 @@
 {
   "name": "auto-roi-calc-web-events-tracking",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A wrapper for the AutoROICalc custom web events tracking JavaScript module.",
   "main": "index.js",
   "types": "index.d.ts",
