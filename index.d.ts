@@ -44,7 +44,7 @@ declare module 'auto-roi-calc-web-events-tracking' {
      * @returns {Array<string>}
      */
     getSources(removeDuplicates?: boolean): Array<string>;
-    
+
     /**
      * Sets the AutoROICalc Website Events Tracking ID.
      * @method setTrackingId
@@ -52,7 +52,7 @@ declare module 'auto-roi-calc-web-events-tracking' {
      * @returns {void}
      */
     setTrackingId(id: string): void;
-    
+
     /**
      * Sets config value for a config key.
      * @method setConfig
@@ -61,14 +61,14 @@ declare module 'auto-roi-calc-web-events-tracking' {
      * @returns {boolean}
      */
     setConfig(key: string, value: string | boolean | number): boolean;
-    
+
     /**
      * Gets current config.
      * @method getConfig
      * @returns {Config}
      */
     getConfig(): Config;
-    
+
     /**
      * Requests sending an event to AutoROICalc.
      * @method sendEvent
@@ -90,8 +90,13 @@ declare module 'auto-roi-calc-web-events-tracking' {
       customSource?: string,
       tags?: Array<string> | string
     ): boolean;
-    
-    setSourcesCookie(): void;
+
+    /** Update in-memory consent using the site's consent manager. Defaults to denied. */
+    setConsent(consent: { analytics?: boolean; marketing?: boolean }): { analytics: boolean; marketing: boolean };
+    hasConsent(category?: 'analytics' | 'marketing'): boolean;
+    /** Queue one anonymous event with static labels. True does not confirm delivery. */
+    sendAnonymousEvent(type: string, desc: string): boolean;
+    setSourcesCookie(): boolean;
   }
 
 }

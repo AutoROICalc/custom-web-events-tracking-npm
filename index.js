@@ -31,8 +31,20 @@ class AutoRoiCalc {
     return arc.sendEvent(type, desc, value, checkTimeout, customTimeoutStorageItemName, customSource, tags);
   }
 
+  setConsent(consent) {
+    return arc.setConsent(consent);
+  }
+
+  hasConsent(category = "analytics") {
+    return arc.hasConsent(category);
+  }
+
+  sendAnonymousEvent(type, desc) {
+    return arc.sendAnonymousEvent(type, desc);
+  }
+
   setSourcesCookie() {
-    arc.setSourcesCookie();
+    return arc.setSourcesCookie();
   }
 }
 

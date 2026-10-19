@@ -14,24 +14,29 @@ declare module "AutoRoiCalc" {
 
   interface AutoRoiCalc {
     appendNewSource(
-      customSource: string = "",
-      checkTimeout: boolean = true,
-      customTimeoutStorageItemName: string = ""
+      customSource?: string,
+      checkTimeout?: boolean,
+      customTimeoutStorageItemName?: string
     ): boolean;
-    getSources(removeDuplicates: boolean = true): Array<string>;
+    getSources(removeDuplicates?: boolean): Array<string>;
     setTrackingId(id: string): void;
     setConfig(key: string, value: string | boolean | number): boolean;
     getConfig(): Config;
     sendEvent(
       type: string,
       desc: string,
-      value: number = 1,
-      checkTimeout: boolean = true,
-      customTimeoutStorageItemName: string = "",
-      customSource: string = "",
-      tags: Array<string> | string = ""
+      value?: number,
+      checkTimeout?: boolean,
+      customTimeoutStorageItemName?: string,
+      customSource?: string,
+      tags?: Array<string> | string
     ): boolean;
-    setSourcesCookie(): void;
+    /** Update in-memory consent using the site's consent manager. Defaults to denied. */
+    setConsent(consent: { analytics?: boolean; marketing?: boolean }): { analytics: boolean; marketing: boolean };
+    hasConsent(category?: 'analytics' | 'marketing'): boolean;
+    /** Queue one anonymous event with static labels. True does not confirm delivery. */
+    sendAnonymousEvent(type: string, desc: string): boolean;
+    setSourcesCookie(): boolean;
   }
 
   const autoRoiCalc: AutoRoiCalc;
